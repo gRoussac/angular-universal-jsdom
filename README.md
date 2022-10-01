@@ -20,3 +20,13 @@ Related issues
 https://github.com/angular/angular-cli/issues/21735
 
 https://github.com/Automattic/node-canvas/issues/1314
+
+
+## Development server
+
+Run `npm run dev:ssr` for a dev server. 
+
+
+Compiled successfully.
+error pops up at /angular-universal-jsdom/server/main.js:145316
+
