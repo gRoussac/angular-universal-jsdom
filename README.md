@@ -1,27 +1,22 @@
-# AngularUniversalJsdom
+Reproduction of issue of https://github.com/jsdom/jsdom/issues/3042
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+```
+ERROR in ./node_modules/jsdom/lib/jsdom/utils.js
+Module not found: Error: Can't resolve 'canvas' in '/node_modules/jsdom/lib/jsdom'
+```
 
-## Development server
+```
+const AsyncIteratorPrototype = Object.getPrototypeOf(Object.getPrototypeOf( /*#__PURE__*/_wrapAsyncGenerator(function* () {})).prototype);
+                                      ^
+TypeError: Cannot convert undefined or null to object
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```
+Error [ERR_REQUIRE_ESM]: require() of ES Module /srv/www/angular-universal-jsdom/node_modules/@angular/common/fesm2015/common.mjs not supported.
+```
 
-## Code scaffolding
+Related issues 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+https://github.com/angular/angular-cli/issues/21735
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://github.com/Automattic/node-canvas/issues/1314
