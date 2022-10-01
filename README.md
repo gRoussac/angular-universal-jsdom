@@ -21,6 +21,8 @@ https://github.com/angular/angular-cli/issues/21735
 
 https://github.com/Automattic/node-canvas/issues/1314
 
+https://github.com/kkomelin/isomorphic-dompurify/pull/36
+
 
 ## Development server
 
